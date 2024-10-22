@@ -1,0 +1,17 @@
+Dear readers,
+
+This script is used to make a "Google Sheet" link to another sheet.
+Allows the targeted sheet to be updated when the source receives changes.
+
+How do we set the script up?
+
+First go over to your form and press the "3-dot" button on the top right center.
+Now open the script editor in the source orbat (Target is possible as well) and copy past the script in the editor. 
+
+The following changes have to be made:
+The target and source key is the section between " ": https://docs.google.com/spreadsheets/d/"1223456789abcdefghijklmnopqrstuvw"/edit?pli=1&gid=389711642#gid=389711642
+The sheets name has to be idetical to the names of the chosen sheets.
+
+When ready, go to triggers and set up a trigger that starts after a change is made in the source.
+
+To test it out, make sure that there is already an answer in the form. 
