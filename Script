@@ -1,0 +1,16 @@
+function copySheetValues() {
+  // Source sheet info
+  var sourceSpreadsheet = SpreadsheetApp.openById('[Source KEY]'); // Replace with your source spreadsheet ID
+  var sourceSheet = sourceSpreadsheet.getSheetByName('[Sheet name]'); // Replace with the actual source sheet name
+  var sourceRange = sourceSheet.getDataRange(); // Get the full range of the source sheet
+  
+  // Get the data (values only) from the source sheet
+  var data = sourceRange.getValues();
+
+  // Target sheet info
+  var targetSpreadsheet = SpreadsheetApp.openById('Target KEY'); // Replace with your target spreadsheet ID
+  var targetSheet = targetSpreadsheet.getSheetByName('[Sheet name]'); // Replace with the actual target sheet name
+
+  // Write the data to the target sheet (adjusting range size to match source data size)
+  targetSheet.getRange(1, 1, data.length, data[0].length).setValues(data); // Copy only the values from source to target
+}
